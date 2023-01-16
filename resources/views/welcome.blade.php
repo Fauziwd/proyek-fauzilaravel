@@ -598,6 +598,7 @@ backdrop-filter: blur(3px)"; class="main-header clearfix" role="header" >
 
 {{ @foreach($syllabus as $p)
         
+        
         <tr>
           <td>
             <a href="http://localhost/idbc/edit.php?id={{ $p->id }}">
