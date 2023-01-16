@@ -596,9 +596,9 @@ backdrop-filter: blur(3px)"; class="main-header clearfix" role="header" >
         });
     </script>
 
-{{ @foreach($syllabus as $p)
+ @foreach($syllabus as $p)
         
-        
+
         <tr>
           <td>
             <a href="http://localhost/idbc/edit.php?id={{ $p->id }}">
@@ -614,6 +614,6 @@ backdrop-filter: blur(3px)"; class="main-header clearfix" role="header" >
           <td>{{ $p->wed }}</td>
         </tr>
 
-    @endforeach --}}
+    @endforeach
 </body>
 </html>
