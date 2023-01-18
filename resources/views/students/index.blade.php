@@ -1,5 +1,6 @@
 @extends('layout.admin')
 @section('content')
+
 <div class="p-4 shadow-lg p-3 mb-5 rounded flex-container;" style="background: rgb(64,134,58);
 background: linear-gradient(211deg, rgba(64,134,58,1) 0%, rgba(93,164,88,1) 36%, rgba(179,255,174,1) 100%); color: #064420; margin: 40px;">
 <h4 style="text-align: center;">Students Data</h4>
@@ -8,7 +9,7 @@ background: linear-gradient(211deg, rgba(64,134,58,1) 0%, rgba(93,164,88,1) 36%,
         <div class="row">
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
-                    <div class="card-body" style=" background: rgba(220, 239, 231, 0.938);">
+                    <div class="card-body" style=" background-image: url('path/to/image.jpg');">
                         <a href="{{ route('students.create') }}" class="btn btn-md btn-success mb-3 shadow rounded">TAMBAH SANTRI</a>
                         <table class="table table-bordered  shadow rounded;">
                               <tr style="background: rgb(64,134,58);
