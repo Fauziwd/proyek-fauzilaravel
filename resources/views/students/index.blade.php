@@ -9,9 +9,9 @@ background: linear-gradient(211deg, rgba(64,134,58,1) 0%, rgba(93,164,88,1) 36%,
         <div class="row">
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
-                    <div class="card-body" style=" background-image: url('path/to/image.jpg');">
+                    <div class="card-body">
                         <a href="{{ route('students.create') }}" class="btn btn-md btn-success mb-3 shadow rounded">TAMBAH SANTRI</a>
-                        <table class="table table-bordered  shadow rounded;">
+                        <table class="table table-bordered; rounded;" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
                               <tr style="background: rgb(64,134,58);
                               background: linear-gradient(211deg, rgba(64,134,58,1) 0%, rgba(93,164,88,1) 36%, rgba(179,255,174,1) 100%); color: #064420; margin: 40px;">
                                 <th scope="col">Nomor Induk</th>
@@ -30,7 +30,7 @@ background: linear-gradient(211deg, rgba(64,134,58,1) 0%, rgba(93,164,88,1) 36%,
                                     <td>{{ $student->email }}</td>
                                     <td>{{ $student->phone}}</td>
                                     <td class="text-center">
-                                        <img src="{{ Storage::url('public/students/').$student->image }}" class="rounded" style="width: 150px">
+                                        <img src="{{ Storage::url('public/students/').$student->image }}" class="rounded" style="width: 80px">
                                     </td>
                      
                                     <td class="text-center">

@@ -15,8 +15,10 @@ class Post extends Model
      * @var array
      */
     protected $fillable = [
+        'number',
+        'name',
+        'email',
+        'phone',
         'image',
-        'title',
-        'content',
     ];
 }

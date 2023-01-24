@@ -15,8 +15,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        //get posts
-        $posts = Post::latest()->paginate(5);
+        //get Posts
+        $posts = Post::oldest()->paginate(5);
 
         //render view with posts
         return view('posts.index', compact('posts'));
@@ -42,9 +42,11 @@ class PostController extends Controller
     {
         //validate form
         $request->validate([
-            'image'     => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'title'     => 'required|min:5',
-            'content'   => 'required|min:10'
+            'number'     => 'required|min:1',
+            'name'   => 'required|min:4',
+            'email'     => 'required|min:5',
+            'phone'   => 'required|min:10',
+            'image'     => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
         //upload image
@@ -53,9 +55,12 @@ class PostController extends Controller
 
         //create post
         Post::create([
-            'image'     => $image->hashName(),
-            'title'     => $request->title,
-            'content'   => $request->content
+            
+            'number'     => $request->number,
+            'name'   => $request->name,
+            'email'   => $request->email,
+            'phone'   => $request->phone,
+            'image'     => $image->hashName()
         ]);
 
         //redirect to index
@@ -84,9 +89,11 @@ class PostController extends Controller
     {
         //validate form
         $request->validate([
-            'image'     => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'title'     => 'required|min:5',
-            'content'   => 'required|min:10'
+            'number'     => 'required|min:1',
+            'name'   => 'required|min:4',
+            'email'     => 'required|min:5',
+            'phone'   => 'required|min:10',
+            'image'     => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
         //check if image is uploaded
@@ -101,17 +108,21 @@ class PostController extends Controller
 
             //update post with new image
             $post->update([
-                'image'     => $image->hashName(),
-                'title'     => $request->title,
-                'content'   => $request->content
+                'number'     => $request->number,
+                'name'   => $request->name,
+                'email'   => $request->email,
+                'phone'   => $request->phone,
+                'image'     => $image->hashName()
             ]);
 
         } else {
 
             //update post without image
             $post->update([
-                'title'     => $request->title,
-                'content'   => $request->content
+                'number'     => $request->number,
+            'name'   => $request->name,
+            'email'   => $request->email,
+            'phone'   => $request->phone
             ]);
         }
 
@@ -128,7 +139,7 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         //delete image
-        Storage::delete('public/posts/'. $post->image);
+        Storage::delete('public/post/'. $post->image);
 
         //delete post
         $post->delete();
