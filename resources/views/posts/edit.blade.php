@@ -17,13 +17,13 @@
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                        <form action="{{ route('posts.update', $student->id) }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('posts.update', $post->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
 
                             <div class="form-group">
                                 <label class="font-weight-bold">Nomor Induk</label>
-                                <input type="number" class="form-control @error('number') is-invalid @enderror" name="number" value="{{ old('number', $student->number) }}" placeholder="Masukkan NISN">
+                                <input type="number" class="form-control @error('number') is-invalid @enderror" name="number" value="{{ old('number', $post->number) }}" placeholder="Masukkan NISN">
                             
                                 <!-- error message untuk number -->
                                 @error('number')
@@ -34,7 +34,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="font-weight-bold">Nama</label>
-                                <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name', $student->name) }}" placeholder="Masukkan Nama Sendiri">
+                                <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name', $post->name) }}" placeholder="Masukkan Nama Sendiri">
                             
                                 <!-- error message untuk name -->
                                 @error('name')
@@ -45,7 +45,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="font-weight-bold">Email</label>
-                                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email', $student->email) }}" placeholder="Masukkan Email">
+                                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email', $post->email) }}" placeholder="Masukkan Email">
                             
                                 <!-- error message untuk email -->
                                 @error('email')
@@ -56,7 +56,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="font-weight-bold">No Hp</label>
-                                <input type="number" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone', $student->phone) }}" placeholder="Masukkan Nomor Hp">
+                                <input type="number" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone', $post->phone) }}" placeholder="Masukkan Nomor Hp">
                             
                                 <!-- error message untuk phone -->
                                 @error('phone')

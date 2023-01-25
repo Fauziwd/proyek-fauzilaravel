@@ -1,8 +1,8 @@
 @extends('layout.admin')
 @section('content')
 
-<div class="p-4 shadow-lg p-3 mb-5 rounded flex-container;" style="background: rgb(64,134,58);
-background: linear-gradient(211deg, rgba(64,134,58,1) 0%, rgba(93,164,88,1) 36%, rgba(179,255,174,1) 100%); color: #064420; margin: 40px;">
+<div class="p-4 shadow-lg p-3 mb-5 rounded flex-container;" style="background: rgb(58, 67, 134);
+background: linear-gradient(211deg, rgb(58, 76, 134) 0%, rgb(88, 93, 164) 36%, rgb(174, 190, 255) 100%); color: #061a44; margin: 40px;">
 <h4 style="text-align: center;">Post Data</h4>
 </div>
 <div class="container mt-5">
@@ -12,8 +12,8 @@ background: linear-gradient(211deg, rgba(64,134,58,1) 0%, rgba(93,164,88,1) 36%,
                     <div class="card-body">
                         <a href="{{ route('posts.create') }}" class="btn btn-md btn-success mb-3 shadow rounded">TAMBAH DATA</a>
                         <table class="table table-bordered; rounded;" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
-                              <tr style="background: rgb(64,134,58);
-                              background: linear-gradient(211deg, rgba(64,134,58,1) 0%, rgba(93,164,88,1) 36%, rgba(179,255,174,1) 100%); color: #064420; margin: 40px;">
+                              <tr style="background: rgb(58, 68, 134);
+                              background: linear-gradient(211deg, rgb(58, 76, 134) 0%, rgb(88, 93, 164) 36%, rgb(174, 190, 255) 100%); color: #061a44; margin: 40px;">
                                 <th scope="col">Nomor Induk</th>
                                 <th scope="col">Nama</th>
                                 <th scope="col">Email</th>
